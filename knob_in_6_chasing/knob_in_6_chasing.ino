@@ -22,7 +22,7 @@ void loop() {
   Serial.print("sensor = " );
   Serial.println(sensorValue);
   
-  delay(2);        // delay in between reads for stability
+  delay(5);        // delay in between reads for stability
 
   if(sensorValue >= 625){
     Serial.print("  ALL STATE ");
