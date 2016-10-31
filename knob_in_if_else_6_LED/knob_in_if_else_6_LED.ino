@@ -23,9 +23,9 @@ void loop() {
   Serial.println(sensorValue);
   
   delay(5);        // delay in between reads for stability
-  
-  if(sensorValue >= 555){
-    Serial.print(" FIRST STATE ");
+
+  if(sensorValue >= 625){
+    Serial.print("  ALL STATE ");
     digitalWrite(2, HIGH);
     digitalWrite(3, HIGH);
     digitalWrite(4, HIGH);
@@ -33,44 +33,62 @@ void loop() {
     digitalWrite(6, HIGH);
     digitalWrite(7, HIGH);
   }
-  else if(sensorValue >= 444 && sensorValue < 555){
-    Serial.print("  SECOND STATE");
-    digitalWrite(2, LOW);
+  else if(sensorValue >= 588 && sensorValue < 625){
+    Serial.print("    FIRST STATE ");
+    digitalWrite(2, HIGH);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
     digitalWrite(5, LOW);
     digitalWrite(6, LOW);
     digitalWrite(7, LOW);
   }
-  else if(sensorValue >= 333 && sensorValue < 444){
-    Serial.print("   THIRD STATE ");
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
-    digitalWrite(4, HIGH);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, HIGH);
-  }
-  else if(sensorValue >= 222 && sensorValue < 333){
-    Serial.print("    FOURTH STATE ");
+  else if(sensorValue >= 490 && sensorValue < 588){
+    Serial.print("      SECOND STATE");
     digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
+    digitalWrite(3, HIGH);
     digitalWrite(4, LOW);
     digitalWrite(5, LOW);
     digitalWrite(6, LOW);
     digitalWrite(7, LOW);
   }
-  else if(sensorValue >= 111 && sensorValue < 222){
-    Serial.print("     FIFTH STATE ");
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
+  else if(sensorValue >= 392 && sensorValue < 490){
+    Serial.print("        THIRD STATE ");
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
     digitalWrite(4, HIGH);
+    digitalWrite(5, LOW);
+    digitalWrite(6, LOW);
+    digitalWrite(7, LOW);
+  }
+  else if(sensorValue >= 294 && sensorValue < 392){
+    Serial.print("          FOURTH STATE ");
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
     digitalWrite(5, HIGH);
+    digitalWrite(6, LOW);
+    digitalWrite(7, LOW);
+  }
+  else if(sensorValue >= 196 && sensorValue < 294){
+    Serial.print("            FIFTH STATE ");
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
     digitalWrite(6, HIGH);
+    digitalWrite(7, LOW);
+  }
+   else if(sensorValue >= 98 && sensorValue < 196){
+    Serial.print("              SIXTH STATE ");
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+    digitalWrite(6, LOW);
     digitalWrite(7, HIGH);
   }
   else{
-    Serial.print("     SIXTH STATE ");
+    Serial.print("                SEVENTH STATE ");
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
