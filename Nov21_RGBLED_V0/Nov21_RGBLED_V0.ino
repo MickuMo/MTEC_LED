@@ -29,4 +29,28 @@ void loop() {
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
   delay(1000);
+
+  //RED & GREEN
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, LOW);
+  delay(1000);
+
+  // RED & BLUE
+  digitalWrite(2, HIGH);
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  delay(1000);
+
+  // GREEN & BLUE
+  digitalWrite(2, LOW);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  delay(1000);
+
+  // OFF
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  delay(1000);
 }
